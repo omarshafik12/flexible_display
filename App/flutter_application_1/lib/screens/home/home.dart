@@ -100,38 +100,30 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+      extendBody: true,
       floatingActionButton: FloatingActionButton(
-        shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(50),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         backgroundColor: Colors.white,
-        onPressed: () {
-          Navigator.pushNamed(context, '/homepage');
-          },
-        child: Icon(Icons.add)
-      ),
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 0.01,
-        clipBehavior: Clip.antiAlias,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              icon: SizedBox(
-                width: 32,
-                height: 32,
-                child: Image.asset('assets/home_page/icons/inform.png'),
-              ),
-              onPressed: () {Navigator.pushNamed(context, '/homepage');
+        onPressed: () {Navigator.pushNamed(context, '/homepage');
               },
-            ),
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        height: 50,
+        color: Colors.white,
+        shape: const CircularNotchedRectangle(),
+        notchMargin: 10,
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
             IconButton(
               icon: SizedBox(
                 width: 32,
                 height: 32,
-                child: Image.asset('assets/home_page/icons/cross-mark.png'),
+                child: Image.asset('assets/home_page/icons/price-tag.png'),
               ),
               onPressed: () {Navigator.pushNamed(context, '/homepage');
               },
@@ -149,13 +141,22 @@ class HomePage extends StatelessWidget {
               icon: SizedBox(
                 width: 32,
                 height: 32,
-                child: Image.asset('assets/home_page/icons/heart.png'),
+                child: Image.asset('assets/home_page/icons/price-tag.png'),
+              ),
+              onPressed: () {Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+            IconButton(
+              icon: SizedBox(
+                width: 32,
+                height: 32,
+                child: Image.asset('assets/home_page/icons/price-tag.png'),
               ),
               onPressed: () {Navigator.pushNamed(context, '/homepage');
               },
             ),
           ],
-        )
+        ),
       ),
     );
   }
@@ -163,3 +164,6 @@ class HomePage extends StatelessWidget {
 
 // need to add button widget later
 // https://www.youtube.com/results?search_query=CircularNotchedRectangle()
+// https://github.com/flutter/flutter/issues/56037
+// https://stackoverflow.com/questions/78476244/flutter-smoother-circular-of-notched-bottomappbar
+// https://github.com/flutter/flutter/issues/21650
