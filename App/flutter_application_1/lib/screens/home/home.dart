@@ -114,38 +114,44 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           IconButton(
-                              icon: Icon(
-                                Icons.home,
-                                color: Colors.deepPurple,
-                                size: 30,
-                              ),
-                              onPressed: () {
-                                setState() {}
-                              }),
+                            icon: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Image.asset('assets/home_page/icons/inform.png'),
+                            ),
+                            onPressed: () {Navigator.pushNamed(context, '/homepage');
+                            },
+                          ),
                           IconButton(
-                              icon: Icon(
-                                Icons.branding_watermark,
-                                size: 30,
-                                color: Colors.black54,
-                              ),
-                              onPressed: () {}),
+                            icon: SizedBox(
+                              width: 42,
+                              height: 42,
+                              child: Image.asset('assets/home_page/icons/cross-mark.png'),
+                            ),
+                            onPressed: () {Navigator.pushNamed(context, '/homepage');
+                            },
+                          ),
                           SizedBox(
                             width: 50,
                           ),
                           IconButton(
-                              icon: Icon(
-                                Icons.cloud_download,
-                                size: 30,
-                                color: Colors.black54,
-                              ),
-                              onPressed: () {}),
+                            icon: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Image.asset('assets/home_page/icons/price-tag.png'),
+                            ),
+                            onPressed: () {Navigator.pushNamed(context, '/homepage');
+                            },
+                          ),
                           IconButton(
-                              icon: Icon(
-                                Icons.face,
-                                size: 30,
-                                color: Colors.black54,
-                              ),
-                              onPressed: () {}),
+                            icon: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Image.asset('assets/home_page/icons/heart.png'),
+                            ),
+                            onPressed: () {Navigator.pushNamed(context, '/homepage');
+                            },
+                          ),
                         ],
                       )),
                   height: 90,
