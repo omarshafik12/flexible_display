@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   icons_plus: ^4.0.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -99,6 +100,9 @@ flutter:
     - family: Quintessential
       fonts:
         - asset: fonts/Quintessential-Regular.ttf
+    - family: Allura
+      fonts:
+        - asset: fonts/Allura-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

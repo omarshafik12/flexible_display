@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import "package:google_fonts/google_fonts.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,9 +12,15 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        title: Text(
-          "S T Y L E",
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: Transform.rotate(
+          angle: -math.pi / 10,
+          child: Text(
+            'Style',
+            style: GoogleFonts.allura(
+              fontSize: 32,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
         ),
         leading: IconButton(
           icon: SizedBox(
