@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -161,14 +162,17 @@ class HomePage extends StatelessWidget {
               ),
             ),
             floatingActionButton: MaterialButton(
-              color: Colors.deepPurple,
-              padding: EdgeInsets.all(20),
+              color: Colors.white,
+              padding: EdgeInsets.all(15),
               onPressed: () {},
               shape: CircleBorder(),
-              child: Icon(
-                Icons.add,
-                size: 35,
-                color: Colors.white,
+              child: Transform.rotate(
+                angle: -math.pi / 6,
+                child: SizedBox(
+                    width: 45,
+                    height: 45,
+                    child: Image.asset('assets/home_page/icons/style.png'),
+                ),
               ),
             ),
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -185,14 +189,14 @@ class CurveDraw extends CustomClipper<Path> {
     print(sh);
     Path path = Path();
     path.moveTo(0, sh);
-    path.lineTo(0, sh / 2);
-    path.quadraticBezierTo(0, 0, sh / 2, 0); //1st curve
+    path.lineTo(0, sh / sh);
+    //path.quadraticBezierTo(0, 0, sh / 2, 0); this curves it on the edges if you also: path.lineTo(0, sh / 2);
     path.lineTo(sw / 2 - sw / 5, 0);
     path.cubicTo(sw / 2 - sw / 8, 0, sw / 2 - sw / 8, sh / 2, sw / 2, sh / 2);
     path.cubicTo(
         sw / 2 + sw / 8, sh / 2, sw / 2 + sw / 8, 0, sw / 2 + sw / 5, 0);
 
-    path.lineTo(sw - sh / 2, 0);
+    path.lineTo(sw - sh / sh, 0);
 
     // path.quadraticBezierTo(
     //     150, size.height - 100, 150, size.height - 110); //2nd Curve IMP
@@ -200,10 +204,10 @@ class CurveDraw extends CustomClipper<Path> {
     // path.quadraticBezierTo(size.width - 150, size.height - 100, size.width - 90,
     //     size.height - 100);
     // path.lineTo(size.width - 60, size.height - 100);
-    path.quadraticBezierTo(sw, 0, size.width, sh / 2);
+    //path.quadraticBezierTo(sw, 0, size.width, sh / 2); this curves it on the edges
     path.lineTo(sw, sh);
     // path.quadraticBezierTo(
-    //     size.width / 2 - 50, size.height / 3, 2 * size.width / 3, 0);
+    //     size.width / 2 - 50, size.height / 3, 2 * size.width / 3, 0); if: path.lineTo(sw - sh / 2, 0);
     //path.lineTo(size.width, 0);
     path.close();
 
