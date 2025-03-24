@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                               onPressed: () {}),
                         ],
                       )),
-                  height: 100,
+                  height: 90,
                   width: double.infinity,
                 ),
                 clipper: CurveDraw(),
