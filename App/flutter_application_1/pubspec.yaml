@@ -68,8 +68,8 @@ flutter:
       - assets/home_page/icons/
       - assets/home_page/background/
   #    - assets/intro_pages/icons/
-  #    - assets/validation_pages/background/
-  #    - assets/validation_pages/icons/
+      - assets/validation_page/background/
+      - assets/validation_page/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

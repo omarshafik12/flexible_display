@@ -34,7 +34,7 @@ class CustomBars extends StatelessWidget {
             child: Image.asset('assets/home_page/icons/user.png'),
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/homepage');
+            Navigator.pushNamed(context, '/login'); //change when done
           },
         ),
         actions: [

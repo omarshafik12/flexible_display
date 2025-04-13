@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/intros/intros.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
+import 'package:flutter_application_1/screens/validation/login_in/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/homepage': (context) => const HomePage(),
         '/intros': (context) => const IntroScreen(),
+        '/login': (context) => LoginPage(),
       }
     );
   }
